@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+{% endblock %}
+
+{% block main%}
+<div class="section" id="grid"> 
+    <img src="{{url_for( 'static', filename='/uploads/' + profile.filename)}}" alt="Profile picture" id="picture" >
+   <div class="grey">
+        <p class="bold"> {{ profile.firstname+' ' + profile.lastname}}</p>
+        <p><i class='far fa-envelope'></i> {{ profile.email }} </p>
+        <p> <i class='fas fa-map-marker-alt'> </i>{{ profile.location }} </p>
+        <p> <i class='far fa-calendar-alt'></i> {{ 'Joined on ' + profile.date }} </p>
+   </div>
+    <div id='aboutMe'>
+        <p id="aboutMeTitle">About me</p>
+        <p> {{ profile.biography }} </p>
+    </div>
+    
+    <button id="sendMessage" class="btn">Send message</button>
+    <button id="follow" class="blueButton btn"> Follow</button>
+</div>
+{% endblock %}

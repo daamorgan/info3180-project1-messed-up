@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main %} 
+<div id="formPage">
+    <h1> Add Profile</h1>
+    <div class="section">
+        <form id="addprofile" action="{{ url_for('profile') }}" method="post" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            {{ form.firstname.label }}
+            {{ form.firstname}}
+            {{ form.lastname.label }}
+            {{ form.lastname}}
+            {{ form.gender.label }}
+            {{ form.gender}}
+            {{ form.email.label }}
+            {{ form.email}}
+            {{ form.location.label }}
+            {{ form.location}}
+            {{ form.biography.label }}
+            {{ form.biography}}
+            {{ form.photo.label }}
+            {{ form.photo (class="Browse", id="BrowseBtn")}} 
+            <button id="AddBtn"> Add profile </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

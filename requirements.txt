@@ -1,0 +1,12 @@
+flask
+Flask-WTF
+Flask-SQLAlCHEMY
+psycopg2
+Werkzeug
+WTForms
+SQLAlchemy
+Flask-Script
+Jinja2
+Flask-Migrate
+Alembic
+gunicorn
